@@ -1,16 +1,14 @@
-const removeFromArray = function (input, number) {
-  const array = input;
-  const args = Array.from(arguments);
-  arr = array.filter((item) => item !== number);
-
-  let longest = '';
-  for (let i = 0; i < arguments.length; i++) {
-    if (arguments[i].length > longest.length) {
-      longest = arguments[i];
-    }
-  }
-  return longest, arr;
+const removeFromArray = function (array_input, ...args) {
+  let arr = array_input;
+  let number_input = args;
+  let output_array = arr.filter(
+    (filtered_item) => !number_input.includes(filtered_item)
+  );
+  console.log(output_array);
+  return output_array;
 };
+
+// Do not edit below this line
 
 // Do not edit below this line
 module.exports = removeFromArray;
