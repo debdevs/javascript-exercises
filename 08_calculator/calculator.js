@@ -34,17 +34,39 @@ const subtract = function (...args) {
 
 const sum = function (...args) {
 
-  const initial = 0
-  const sum = args.reduce(
+
+  
+  if (Array.isArray(args[0])){
+
+    const initial = 0
+    const sum = args[0].reduce(
+      
+      (accumulator, currentValue) => accumulator + currentValue, initial
+      
+      
+      )
     
-    (accumulator, currentValue) => accumulator + currentValue, initial
     
-    
-    )
+    return parseInt(sum)
   
   
-  return parseInt(sum)
+  }
   
+  else
+  {
+    const initial = 0
+    const sum = args.reduce(
+      
+      (accumulator, currentValue) => accumulator + currentValue, initial
+      
+      
+      )
+    
+    
+    return parseInt(sum)
+  
+  }
+   
 
 
 };
@@ -52,15 +74,30 @@ const sum = function (...args) {
 const multiply = function (...args) {
 
 
+if (Array.isArray(args[0])){
+
+  const initialValue = 1;
+  const sumWithInitial = args[0].reduce(
+    (accumulator, currentValue) =>    (accumulator) *  currentValue  ,
+    initialValue
+  );
+  
+  return(sumWithInitial)
 
 
+}
+
+else
+{
   const initialValue = 1;
   const sumWithInitial = args.reduce(
     (accumulator, currentValue) =>    (accumulator) *  currentValue  ,
     initialValue
   );
   
-  return(sumWithInitial);
+  return(sumWithInitial)
+
+}
 
 
 };
