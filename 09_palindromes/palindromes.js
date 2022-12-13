@@ -1,11 +1,12 @@
 const palindromes = function (str) {
+
     let input = str
-    let compare = input.split("").reverse().join("")
-    let compare_result = input.split(",").reverse().join("").toLowerCase().replace(".","")
+   
+    let compare_result = str.split(",").join("").toLowerCase().replace(".","")
+
+	let compare_result_1 = compare_result.split("").reverse().join("")
 
 
-
-    let reverse = str.split("").reverse().join("")
     let result = str.split(",").join("").toLowerCase().replace(".","")
     let status = null
 
@@ -14,8 +15,11 @@ const palindromes = function (str) {
     } else{
         status = false
     }
-
+  console.log(compare_result_1.split(" ").join(""))
+	console.log(result.split(" ").join(""))
     return status
+    
+
 
 };
 
