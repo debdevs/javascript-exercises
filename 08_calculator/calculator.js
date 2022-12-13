@@ -102,9 +102,43 @@ else
 
 };
 
-const power = function () {};
+const power = function (base,power) {
 
-const factorial = function () {};
+
+	result = Math.pow(base, power)
+  console.log(result)
+  return result
+
+
+
+
+};
+
+const factorial = function (number) {
+
+
+	let number_array = []
+
+    let i = 0
+    while (i<number){
+     i++
+      number_array.push(i)
+    }
+  const initial = 1
+  const sum = number_array.reduce(
+    
+    (accumulator, currentValue) => accumulator * currentValue, initial
+    
+    
+    )
+  
+  console.log(sum)
+  console.log(number_array)
+  return parseInt(sum)
+
+
+
+};
 
 // Do not edit below this line
 module.exports = {
